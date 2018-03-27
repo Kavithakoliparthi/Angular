@@ -1,0 +1,43 @@
+﻿<h1>
+     Hello {{name}}
+</h1>
+
+<h2>Data binding in Angular2 </h2>
+<div>
+        <h3>Interpolation Example  </h3>
+        Hello{{name}}     
+</div>
+
+<div>
+    <h3>One way binding Example</h3>
+    Hello <span [innerText]="names"></span>!
+    <br /><br />
+    <input type='text' [value]="welcomeText" />
+</div> 
+
+<div>
+    <h5>Two way binding Example(With ngModel)</h5>
+    Enter you Name:  <input [(ngModel)]="enterName" />
+    <br /><br />
+    <span> WelCome {{enterName}} ! </span>
+</div>  
+
+<div>
+    <h5>Two way binding (without ngModel directive) Example</h5>
+    Enter you Name: <input #txtName type="text" (keyup)="0" />
+    <br /><br />
+    <span> WelCome {{txtName.value}} ! </span>
+</div>  
+
+<div>
+    <h5>Event binding Example</h5>
+    <button (click)="onClickMe()">Click me!</button>
+    <br /><br />
+    <span> {{messageText}} </span>
+</div>  
+
+<div>
+    <h3>
+
+    </h3>
+</div>
