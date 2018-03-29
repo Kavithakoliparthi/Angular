@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using EmployeeService.Models;
-using EmployeeService.Providers;
-using EmployeeService.Results;
+using Employee.Models;
+using Employee.Providers;
+using Employee.Results;
 
-namespace EmployeeService.Controllers
+namespace Employee.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
