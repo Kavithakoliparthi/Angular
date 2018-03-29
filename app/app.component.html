@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div>
+
+ {{obj.name}}
+<br>
+
+ <!-- <p>{{arr[0]}}</p>
+ <p>{{arr[1]}}</p>
+ <p>{{arr[2]}}</p> -->
+ <ul>
+   <li *ngFor = "let i of arr"> {{i}} </li>
+ </ul>
+ <br>
+ <p *ngIf="isTrue">Hello</p>
+<p *ngIf= "name != 'Micky' && true; else firstTemp">True</p>
+<ng-template #firstTemp>This is first template</ng-template>
+<br>
+<p *ngIf="isFalse; then first else second">Boolean</p>
+<ng-template #first>This is 1st Template</ng-template>
+<ng-template #second>This is 2nd Template</ng-template>
+<br>
+ <a routerLink="/member">Member</a>
+ <a routerLink="/product">Product</a>
+<br>
+<router-outlet></router-outlet>
+
