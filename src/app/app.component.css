@@ -1,0 +1,52 @@
+.main
+{
+    width:500px;
+    text-align: center;
+    margin:1 auto;
+    border:2px solid blue;
+    border-bottom: 1px;
+    margin-top:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    text-align:center;
+    background-color: cadetblue;
+    padding:30px;
+    margin-top:0px;
+    color:white;
+}
+.addItem{
+    position:relative;
+    padding-bottom:0px;
+    height:30px;
+}
+.addText{
+    width:80%;
+    height:30px;
+    padding:5px;
+    font-size:20px;
+}
+.addItem button{
+    height:45px;
+    width:50px;
+    padding:5px;
+}
+ul{
+    list-style-type:none;
+    font-size:20px;
+    color:darkcyan;
+    margin-left:-40px;
+    margin-bottom:0px;
+}
+li{
+    border-bottom:1px solid cadetblue;
+    background-color: coral;
+    padding:10px 0px;
+    margin-bottom:5px;
+}
+span{
+    cursor:pointer;
+    position:realtive;
+    float:right;
+    margin-right:10px;
+}

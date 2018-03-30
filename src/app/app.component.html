@@ -1,0 +1,75 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div>
+
+ {{obj.name}}
+<br>
+
+ <!-- <p>{{arr[0]}}</p>
+ <p>{{arr[1]}}</p>
+ <p>{{arr[2]}}</p> -->
+ <ul>
+   <li *ngFor = "let i of arr"> {{i}} </li>
+ </ul>
+ <br>
+ <p *ngIf="isTrue">Hello</p>
+<p *ngIf= "name != 'Micky' && true; else firstTemp">True</p>
+<ng-template #firstTemp>This is first template</ng-template>
+<br>
+<p *ngIf="isFalse; then first else second">Boolean</p>
+<ng-template #first>This is 1st Template</ng-template>
+<ng-template #second>This is 2nd Template</ng-template>
+<br>
+ <a routerLink="/member">Member</a>
+ <a routerLink="/product">Product</a>
+<br>
+<router-outlet></router-outlet>
+
+
+<div class="main">
+<h2>Items</h2>
+<div class="addItem">
+    <input [(ngModel)]="newItem" placeholder="Add Item" class="addText">
+  <button (click) ="pushItem()">ADD</button>
+</div>
+<ul>
+  <li *ngFor="let i of items; let ind=index">
+    {{i}}
+    <span (click)="removeItem">X</span>
+  </li>
+</ul>
+</div>
+<br>
+<br>
+<form class="container"
+    #userForm="ngForm"
+    (ngSubmit) = "onSubmit(userForm.value)">
+   <input type="text" name="firstname" placeholder="firstname" ngModel>
+  <br>
+  <br>
+  <input type="text" name="lastname" placeholder="lastname" ngModel>
+  <br>
+  <br>
+  <input type="radio" name="Gendet" value="Male" ngModel>Male &nbsp;
+  <input type="radio" name="Gender" value="Female" ngModel>Female
+  <br>
+  <br>
+  <input type="checkbox" name="C" ngModel>C &nbsp;
+  <input type="checkbox" name="C++" ngModel>C++ &nbsp;
+  <input type="checkbox" name="Java" ngModel>Java &nbsp;
+  <input type="checkbox" name="Dotnet" ngModel>Dotnet &nbsp;
+  <br>
+  <br>
+  <select name="Education" ngModel>
+    <option value="MCA">MCA</option>
+    <option value="MBA">MBA</option>
+    <option value="MSC">MSC</option>
+  </select>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
